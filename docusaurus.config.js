@@ -28,19 +28,19 @@ module.exports = {
       },
       items: [
         {
-          href: '/',
+          href: '/../',
           label: 'Home',
           position: 'left',
           target: '_top',
         },
         {
-          href: '/docs',
+          href: '/',
           label: 'Docs',
           position: 'right',
           target: '_top',
         },
         {
-          to: '/blog',
+          to: '/../blog',
           label: 'Blog',
           position: 'right',
         },
@@ -62,7 +62,7 @@ module.exports = {
             // },
             {
               label: 'Support',
-              to: '/docs/introduction/support',
+              to: '/introduction/support',
             },
           ],
         },
@@ -105,6 +105,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
