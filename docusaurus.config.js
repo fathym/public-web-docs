@@ -1,6 +1,10 @@
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Fathym Cloud',
-  tagline: 'Accelerate Solutions | Control the Cloud',
+  title: 'Fathym',
+  tagline: 'More Technology. More Accessible. To More People.',
   url: 'https://www.fathym.com',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
@@ -17,33 +21,27 @@ module.exports = {
       disableSwitch: true,
     },
     navbar: {
-      title: 'Cloud Documentation',
+      // title: 'Fathym',
       logo: {
         alt: 'Fathym',
         src: 'img/Fathym-logo-white-01.png',
       },
       items: [
         {
-          href: 'https://www.fathym.com/',
+          href: '/',
           label: 'Home',
           position: 'left',
           target: '_top',
         },
         {
-          href: 'https://www.fathym.com/pricing',
-          label: 'Pricing',
+          href: '/docs',
+          label: 'Docs',
           position: 'right',
           target: '_top',
         },
         {
-          href: 'https://www.fathym.com/blog',
+          to: '/blog',
           label: 'Blog',
-          position: 'right',
-          target: '_top',
-        },
-        {
-          href: 'https://www.fathym.com/dashboard',
-          label: 'Sign In',
           position: 'right',
         },
       ],
@@ -54,14 +52,14 @@ module.exports = {
         {
           title: 'Next Steps',
           items: [
-            {
-              label: 'Getting Started',
-              to: 'https://www.fathym.com/dashboard',
-            },
-            {
-              label: 'Pricing',
-              to: 'https://www.fathym.com/pricing',
-            },
+            // {
+            //   label: 'Getting Started',
+            //   to: 'https://www.iot-ensemble.com/dashboard',
+            // },
+            // {
+            //   label: 'Pricing',
+            //   to: 'https://www.iot-ensemble.com/pricing',
+            // },
             {
               label: 'Support',
               to: '/docs/introduction/support',
@@ -85,8 +83,21 @@ module.exports = {
             },
           ],
         },
+        {
+          title: 'Powered by Fathym',
+          items: [
+            {
+              label: 'Learn More',
+              href: 'https://www.fathym.com',
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Fathym, Inc`,
+      copyright: `Copyright © ${new Date().getFullYear()} Fathym, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
   },
   presets: [
@@ -95,9 +106,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+          // editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
